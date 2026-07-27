@@ -2,7 +2,7 @@
 
 [![RapidAPI Badge](https://img.shields.io/badge/Available%20on-RapidAPI-black?style=for-the-badge&logo=rapidapi)](https://rapidapi.com/osint-org-osint-org-default/api/social-media-scanner1)
 
-A multi-platform API to verify social media account existence by username, email, or phone number across Facebook, Instagram, X (Twitter), Snapchat, and Google.
+A multi-platform API to verify social media account existence by username, email, or phone number across Facebook, Instagram, X (Twitter), Snapchat, Google and Microsoft.
 
 ## Table of Contents
 - [Features](#features)
@@ -18,7 +18,7 @@ A multi-platform API to verify social media account existence by username, email
 
 ## Features
 
-✅ Single account verification across 5+ platforms  
+✅ Single account verification across 6+ platforms  
 ✅ Bulk check up to 10 accounts at once  
 ✅ Customizable platform selection
 ✅ Supports emails, usernames, and phone numbers  
@@ -135,7 +135,7 @@ print(response.json())
   
 - Platform Options
   - programs array must use these values (case-sensitive):
-    "facebook", "instagram", "snapchat", "x", "google"
+    "facebook", "instagram", "snapchat", "x", "google", "microsoft"
   - Omit programs to check all platforms
  
 ## Pricing
