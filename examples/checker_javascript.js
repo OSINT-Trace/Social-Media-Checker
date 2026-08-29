@@ -1,29 +1,36 @@
 const data = JSON.stringify({
-	programs: [
-		'facebook',
-		'google',
-		'instagram',
-		'snapchat',
-		'x'
-	],
-	input: [
-		'test@gmail.com',
-		'john@doe.com'
-	]
+  input: 'test@gmail.com',
+  programs: [
+    'facebook',
+    'google',
+    'instagram',
+    'snapchat',
+    'x',
+    'microsoft'
+  ]
 });
 
 const xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
 
 xhr.addEventListener('readystatechange', function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
 });
 
-xhr.open('POST', 'https://social-media-scanner1.p.rapidapi.com/check_bulk');
-xhr.setRequestHeader('x-rapidapi-key', 'f8d61a6a57msh9c4087768abfa82p1ca9bajsncbb35955ff55');
-xhr.setRequestHeader('x-rapidapi-host', 'social-media-scanner1.p.rapidapi.com');
+// Primary (Recommended): OSINT Trace Direct API
+xhr.open('POST', 'https://api.osinttrace.com/v1/check');
+xhr.setRequestHeader('x-osint-key', 'YOUR_OSINT_KEY');
 xhr.setRequestHeader('Content-Type', 'application/json');
+
+// Alternative (API.Market):
+// xhr.open('POST', 'https://prod.api.market/api/v1/osint-trace-1/social-media-scanner/check');
+// xhr.setRequestHeader('X-Api-Key', 'YOUR_API_KEY');
+
+// Alternative (RapidAPI):
+// xhr.open('POST', 'https://social-media-scanner1.p.rapidapi.com/check');
+// xhr.setRequestHeader('x-rapidapi-key', 'YOUR_RAPIDAPI_KEY');
+// xhr.setRequestHeader('x-rapidapi-host', 'social-media-scanner1.p.rapidapi.com');
 
 xhr.send(data);
