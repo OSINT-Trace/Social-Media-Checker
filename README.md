@@ -126,12 +126,12 @@ curl --request POST \
 
 | Platform (`programs` code) | Extracted Metadata & Diagnostics |
 |:---|:---|
-| **Google** (`google`) | Account existence, active vs. suspended status notes, Gmail / Workspace deliverability |
+| **Google** (`google`) | Account existence, Gmail / Workspace deliverability, phone number validation & avatar profile metadata |
 | **Microsoft** (`microsoft`) | Account type (Personal / Azure AD), tenant classification, masked email / phone |
 | **Facebook** (`facebook`) | Numerical User ID, display name, HD avatar photo, custom avatar flag, linked accounts |
 | **Instagram** (`instagram`) | User ID, username, display name, bio, avatar URL, followers/following/posts counts, verified status |
 | **Snapchat** (`snapchat`) | Display name, bio, 3D Bitmoji render URL, banner image, subscriber count, verified Star badge, Snapcode |
-| **X / Twitter** (`x`) | Display name, handle, bio, avatar URL, followers/following stats, creation date (`created_at`), verified status |
+| **X / Twitter** (`x`) | Account existence, phone validation, display name, handle, bio, avatar URL, followers/following stats, creation date (`created_at`), verified status |
 
 ---
 
